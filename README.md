@@ -1,5 +1,5 @@
 # hikrobot_ros2
-ROS1 driver for hikrobot Aera scan cameras: https://www.hikrobotics.com/en/machinevision/visionproduct?typeId=78&id=145
+ROS2 driver for hikrobot Aera scan cameras: https://www.hikrobotics.com/en/machinevision/visionproduct?typeId=78&id=145
 
 ## 1. Prerequisites
 ### 1.1 hikrobot MVS driver for Linux
