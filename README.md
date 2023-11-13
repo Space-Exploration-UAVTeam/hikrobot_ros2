@@ -24,7 +24,7 @@ source ~/ros2_ws/install/setup.bash
 ## 3. Run
 ### 1.1 Single camera, with stand alone exposure time calculating
 ```
-ros2 launch hikrobot_ros2 MvCameraPub.launch
+ros2 launch hikrobot_ros2 MvCameraPub_launch.py
 ```
 ### 1.2 Other executables
 to be...
