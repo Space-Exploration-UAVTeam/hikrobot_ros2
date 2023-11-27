@@ -15,7 +15,7 @@ ament_auto_find_build_dependencies()
 
 # include_directories(${PROJECT_SOURCE_DIR}/include)     
 include_directories(/opt/MVS/include)
-# include_directories(include ${OpenCV_INCLUDE_DIRS})
+# include_directories(/opt/ros/humble/include/cv_bridge) # you may need this
 link_directories(/opt/MVS/lib/aarch64)
 link_libraries(MvCameraControl)
 
