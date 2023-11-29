@@ -49,7 +49,7 @@ class CameraPublisher : public rclcpp::Node
 		rclcpp::QoS qos(rclcpp::KeepLast(3),rmw_qos_profile_sensor_data);
 		// left_pub = image_transport::create_camera_publisher(this, "/hikrobot/image_left", qos);
 		left_pub = this->create_publisher<sensor_msgs::msg::Image>("/hikrobot/image_left", qos);
-		timer_ = this->create_wall_timer(100ms, std::bind(&CameraPublisher::timer_callback, this));
+		timer_ = this->create_wall_timer(500ms, std::bind(&CameraPublisher::timer_callback, this));
 
 		//枚举子网内指定的传输协议对应的所有设备
 		unsigned int nTLayerType = MV_USB_DEVICE;//MV_GIGE_DEVICE
