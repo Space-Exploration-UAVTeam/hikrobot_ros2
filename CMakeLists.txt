@@ -19,6 +19,21 @@ include_directories(/opt/MVS/include)
 link_directories(/opt/MVS/lib/aarch64)
 link_libraries(MvCameraControl)
 
-ament_auto_add_executable(MvCameraPub src/MvCameraPub.cpp)
+#ament_auto_add_executable(MvCameraPub src/MvCameraPub.cpp)
+add_executable(MvCameraPub
+  src/MvCameraPub.cpp)
+target_link_libraries(MvCameraPub MvCameraControl)
+ament_target_dependencies(MvCameraPub
+ rclcpp
+ sensor_msgs
+ cv_bridge
+ )
 
-ament_auto_package()
+install(TARGETS MvCameraPub
+  DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY launch 
+  DESTINATION share/${PROJECT_NAME})
+
+ament_package()
+# ament_auto_package()
